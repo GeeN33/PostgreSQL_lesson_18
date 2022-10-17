@@ -12,7 +12,7 @@ list_tables=['animal_type', 'animal_breed', 'animal_color', 'shelters_outcome_su
 
 def parsing_csv()->None:
     """
-
+    Загружаю csv файл разбираю его в основной лист с словарями и на отдельные словари
 
     """
     with open('main_animals.csv', newline='', encoding='utf-8') as f:

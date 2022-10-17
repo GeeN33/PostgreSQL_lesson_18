@@ -48,7 +48,7 @@ def print_rez(rez,name_table) -> None:
 
 def create_tables(connection):
     """
-
+    Создаёт таблицы по циклу, имена таблиц в листе
     """
     for v in list_tables_create:
         command = create_table(v)
@@ -57,8 +57,8 @@ def create_tables(connection):
 
 def create_table(name_table:str):
     """
-
-    :param name_table:
+     Команды для создания таблиц
+    :param name_table: таблица
     """
     match name_table:
         case 'animal_type':
@@ -138,7 +138,7 @@ def create_table(name_table:str):
 
 def color_corect(dict_animal_color:dict,color:str):
     """
-
+     Коррекция цвета, удаление пробелов
     :param dict_animal_color:
     :param color:
     :return:
@@ -149,7 +149,7 @@ def color_corect(dict_animal_color:dict,color:str):
 
 def name_corect(name:str):
     """
-
+    Коррекция имени,  удаление не нужных символов
     :param name:
     :return:
     """
@@ -159,7 +159,7 @@ def name_corect(name:str):
 
 def outcome_subtype_corect(name:str):
     """
-
+    Коррекция, удаление не нужных символов
     :param name:
     :return:
     """
@@ -169,7 +169,7 @@ def outcome_subtype_corect(name:str):
 
 def list_return_dict(animal_id:str, list_shelters:list):
     """
-
+     Возвращает справочник из общего листа по  animal_id
     :param animal_id:
     :param list_shelters:
     :return:
@@ -182,7 +182,7 @@ def list_return_dict(animal_id:str, list_shelters:list):
 
 def insert_into_not_references(connection, dict_animal_type:dict, dict_animal_breed:dict, dict_animal_color:dict, dict_shelters_outcome_subtype:dict, dict_shelters_outcome_type:dict, name_table:str):
     """
-
+     Заполнение таблиц animal_type, animal_breed, animal_color, shelters_outcome_subtype, shelters_outcome_type
     :param connection:
     :param dict_animal_type:
     :param dict_animal_breed:
@@ -263,7 +263,7 @@ def insert_into_not_references(connection, dict_animal_type:dict, dict_animal_br
 
 def insert_into_shelters_animal(connection,dict_animal_type: dict, dict_animal_breed: dict,dict_animal_color: dict,dict_shelters_animal: dict,list_shelters:list):
     """
-
+     Заполнение таблицы shelters_animal
     :param connection:
     :param dict_animal_type:
     :param dict_animal_breed:
@@ -290,7 +290,7 @@ def insert_into_shelters_animal(connection,dict_animal_type: dict, dict_animal_b
 
 def insert_into_shelters(connection,dict_shelters_animal: dict,dict_shelters_outcome_subtype: dict,dict_shelters_outcome_type: dict,list_shelters:list):
     """
-
+     Заполнение таблиц shelters
     :param connection:
     :param dict_shelters_animal:
     :param dict_shelters_outcome_subtype:
