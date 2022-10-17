@@ -3,6 +3,14 @@
 ## Приложение, создает таблицы со связями
    Загружаю csv файл разбираю его в основной лист с словарями и на отдельные словари,
    Потом создаю таблицы со связями и записываю туда данные из словарей  
+   
+## Пример SQL запроса для выборки из таблиц
+   SELECT sh.fk_animal_id, an.animal_id, an."name", c.color, st.outcome_subtype
+   FROM shelters sh
+   JOIN shelters_animal an ON an.id = sh.fk_animal_id
+   JOIN animal_color c ON c.id_color = an.fk_color1
+   JOIN shelters_outcome_subtype st ON st.id_outcome_subtype = sh.fk_shelters_outcome_subtype
+   ORDER BY sh.fk_animal_id   
 
 ## Критерии проверки:
 
