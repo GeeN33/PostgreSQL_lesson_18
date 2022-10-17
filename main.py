@@ -17,11 +17,8 @@ def parsing_csv()->None:
     """
     with open('main_animals.csv', newline='', encoding='utf-8') as f:
         reader = csv.DictReader(f, delimiter=',', skipinitialspace=True)
-        j=0
         for row in reader:
-            j += 1
             list_shelters.append(row)
-            if j > 100: break
         list_shelters_animal = []
         list_animal_type = []
         list_animal_breed = []
